@@ -1,0 +1,3 @@
+CREATE TABLE Apples (
+ id TEXT NOT NULL
+);
