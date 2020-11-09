@@ -1,0 +1,7 @@
+CREATE TABLE Mangos (
+  fruit TEXT
+);
+
+CREATE TABLE Bananas (
+  fruit TEXT
+);
