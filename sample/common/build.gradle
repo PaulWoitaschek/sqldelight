@@ -10,6 +10,7 @@ archivesBaseName = 'sample-common'
 sqldelight {
   HockeyDb {
     packageName = "com.example.sqldelight.hockey"
+    schemaOutputDirectory = file("src/commonMain/sqldelight/databases")
   }
 }
 
