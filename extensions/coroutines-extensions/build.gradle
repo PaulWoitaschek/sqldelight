@@ -29,12 +29,6 @@ kotlin {
         implementation project(':drivers:sqlite-driver')
       }
     }
-    jsTest {
-      dependencies {
-        implementation deps.kotlin.test.js
-        implementation project(':drivers:sqljs-driver')
-      }
-    }
     nativeMain {
       dependencies {
         implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.kotlinCoroutines}-native-mt") {
@@ -52,29 +46,6 @@ kotlin {
     }
   }
 
-  js {
-    nodejs {
-      testTask {
-        useMocha {
-          timeout = "5s"
-        }
-      }
-    }
-    browser {
-      testTask {
-        useMocha {
-          timeout = "5s"
-        }
-      }
-    }
-    compilations.all {
-      it.compileKotlinTask.kotlinOptions {
-        moduleKind = "umd"
-        sourceMap = true
-        sourceMapEmbedSources = null
-      }
-    }
-  }
 
   targets {
     targetFromPreset(presets.jvm, 'jvm')
